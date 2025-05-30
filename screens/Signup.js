@@ -30,7 +30,7 @@ export default function Signup() {
 
       // Save to AsyncStorage
       await SecureStore.setItemAsync("userKey", newKey);
-
+      
       Alert.alert(
         "Key Generated & Copied",
         "Your unique sign-in key has been copied to your clipboard. You can paste and save it anywhere safe.",
@@ -73,6 +73,7 @@ export default function Signup() {
         <TouchableOpacity onPress={() => navigation.navigate("Signin")}>
           <Text style={styles.link}>Already have a key? Sign In</Text>
         </TouchableOpacity>
+        {/* <Text style={{ color: "white" }}></Text> */}
       </KeyboardAvoidingView>
     </ImageBackground>
   );
